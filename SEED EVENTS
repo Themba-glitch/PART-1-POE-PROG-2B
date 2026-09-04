@@ -1,0 +1,4 @@
+INSERT INTO dbo.Events (OrganiserID, EventName, EventType, EventDate, Location, Description) VALUES
+(1, 'Johannesburg City Run',    'run',   '2026-11-15', 'Johannesburg, Gauteng',      'Annual road running event through the city centre.'),
+(1, 'Soweto Charity Walk',      'walk',  '2026-10-04', 'Soweto, Gauteng',            'Community fundraising walk.'),
+(2, 'Cape Winelands Cycle Tour','cycle', '2026-12-06', 'Stellenbosch, Western Cape', 'Scenic cycling tour through the winelands.');
