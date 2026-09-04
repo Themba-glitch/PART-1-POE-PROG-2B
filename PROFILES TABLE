@@ -1,0 +1,12 @@
+
+
+CREATE TABLE dbo.Profiles (
+    ProfileID           INT IDENTITY(1,1) PRIMARY KEY,
+    UserID              INT NOT NULL UNIQUE
+                        FOREIGN KEY REFERENCES dbo.Users(UserID) ON DELETE CASCADE,
+    PhoneNumber         VARCHAR(20)  NULL,
+    DateOfBirth         DATE         NULL,
+    Gender              VARCHAR(20)  NULL,
+    EmergencyContact    VARCHAR(150) NULL,
+    Province            VARCHAR(50)  NULL
+);
