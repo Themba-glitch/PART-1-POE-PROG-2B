@@ -1,0 +1,5 @@
+INSERT INTO dbo.Enrolments (UserID, CategoryID, Status, PaymentStatus) VALUES
+(3, 2, 'confirmed', 'paid'),
+(3, 5, 'pending',   'unpaid'),
+(4, 1, 'confirmed', 'paid'),
+(4, 4, 'confirmed', 'paid');
