@@ -1,0 +1,6 @@
+
+INSERT INTO dbo.Users (FullName, Email, PasswordHash, Role) VALUES
+('Thabo Nkosi',   'thabo.nkosi@raceday.co.za',   'hashed_pw_1', 'organiser'),
+('Lindiwe Zulu',  'lindiwe.zulu@raceday.co.za',  'hashed_pw_2', 'organiser'),
+('Johan Botha',   'johan.botha@raceday.co.za',   'hashed_pw_3', 'participant'),
+('Aisha Patel',   'aisha.patel@raceday.co.za',   'hashed_pw_4', 'participant');
