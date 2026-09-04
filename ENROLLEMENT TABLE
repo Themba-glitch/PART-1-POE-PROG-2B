@@ -1,0 +1,13 @@
+CREATE TABLE dbo.Enrolments (
+    EnrolmentID      INT IDENTITY(1,1) PRIMARY KEY,
+    UserID           INT NOT NULL
+                     FOREIGN KEY REFERENCES dbo.Users(UserID),
+    CategoryID       INT NOT NULL
+                     FOREIGN KEY REFERENCES dbo.Categories(CategoryID) ON DELETE CASCADE,
+    EnrolmentDate    DATE          NOT NULL DEFAULT CAST(GETDATE() AS DATE),
+    Status           VARCHAR(20)   NOT NULL DEFAULT 'pending'
+                     CHECK (Status IN ('pending','confirmed','cancelled')),
+    PaymentStatus    VARCHAR(20)   NOT NULL DEFAULT 'unpaid'
+                     CHECK (PaymentStatus IN ('unpaid','paid','refunded')),
+    CONSTRAINT UQ_User_Category UNIQUE (UserID, CategoryID)
+);
