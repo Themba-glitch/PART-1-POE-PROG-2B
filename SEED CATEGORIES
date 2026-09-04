@@ -1,0 +1,7 @@
+INSERT INTO dbo.Categories (EventID, CategoryName, DistanceKM, EntryFee, MaxParticipants) VALUES
+(1, '5km',  5.00,  100.00, 500),
+(1, '10km', 10.00, 150.00, 500),
+(1, '21km', 21.10, 250.00, 300),
+(2, '5km',  5.00,  50.00,  1000),
+(3, '50km', 50.00, 350.00, 400),
+(3, '100km',100.00,500.00, 200);
