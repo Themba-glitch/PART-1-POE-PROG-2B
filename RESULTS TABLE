@@ -1,0 +1,9 @@
+CREATE TABLE dbo.Results (
+    ResultID           INT IDENTITY(1,1) PRIMARY KEY,
+    EnrolmentID        INT NOT NULL UNIQUE
+                       FOREIGN KEY REFERENCES dbo.Enrolments(EnrolmentID) ON DELETE CASCADE,
+    FinishTime         TIME(0)   NULL,
+    PositionOverall    INT       NULL,
+    PositionCategory   INT       NULL,
+    RecordedAt         DATETIME  NOT NULL DEFAULT GETDATE()
+);
