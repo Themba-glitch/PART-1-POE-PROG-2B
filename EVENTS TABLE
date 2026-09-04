@@ -1,0 +1,11 @@
+CREATE TABLE dbo.Events (
+    EventID         INT IDENTITY(1,1) PRIMARY KEY,
+    OrganiserID     INT NOT NULL
+                    FOREIGN KEY REFERENCES dbo.Users(UserID),
+    EventName       VARCHAR(150)  NOT NULL,
+    EventType       VARCHAR(20)   NOT NULL CHECK (EventType IN ('run','walk','cycle')),
+    EventDate       DATE          NOT NULL,
+    Location        VARCHAR(150)  NOT NULL,
+    Description     VARCHAR(MAX)  NULL
+);
+
